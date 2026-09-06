@@ -41,7 +41,6 @@ resource "aws_lambda_function" "bedtrack_processor" {
   # SQS trigger — batch size of 10 with report_batch_item_failures
   # allows partial batch success; failed messages retry individually
   # rather than reprocessing the entire batch
-  event_source_mapping_config = null  # Defined via aws_lambda_event_source_mapping below
 
   tracing_config {
     mode = "Active"  # X-Ray tracing for end-to-end request visibility
