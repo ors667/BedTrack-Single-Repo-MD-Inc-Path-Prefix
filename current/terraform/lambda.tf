@@ -69,4 +69,7 @@ resource "aws_lambda_function" "isolated_processor" {
     subnet_ids         = []
     security_group_ids = []
   }
+  tracing_config {
+    mode = "Active"
+}
 }
